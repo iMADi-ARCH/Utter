@@ -60,18 +60,29 @@ function App() {
     },
   ]);
 
-  const setTaskDone = (jobId, taskId, is_done) => {
-    let temp = jobsList;
-    temp[jobId].tasks[taskId].done = !temp[jobId].tasks[taskId].done;
+  const setTaskProp = (jobId, taskId, prop, value) => {
+    let temp = [...jobsList];
+    temp[jobId].tasks[taskId][prop] = value;
     setJobsList(temp);
-    console.log("After checking Carrot", jobsList[jobId].tasks);
+    return temp;
   }
+  const setJobProp = (jobId, prop, value) => {
+    let temp = [...jobsList];
+    temp[jobId][prop] = value;
+    setJobsList(temp);
+    return temp;
+  }
+
+  // const setTaskTitle = (jobId, taskId, newTitle) => {
+  //   let temp = [...jobsList];
+  //   temp[jobId].tasks[taskId].title = newTitle;
+  //   setJobsList(temp);
+  // }
 
   return (
     <main className="w-full h-full bg-gray-200 flex flex-col justify-center">
-      <JobsContext.Provider value={setTaskDone}>
+      <JobsContext.Provider value={[setTaskProp, setJobProp]}>
         <MyMenu />
-        <div onClick={() => {console.log("Initially:", jobsList[1].tasks)}} >SOME DEBUG STUFF</div>
         <Navbar />
         <Jobs jobs={jobsList} />
       </JobsContext.Provider>

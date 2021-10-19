@@ -3,7 +3,7 @@ import { Person, Home, CheckBox } from "@material-ui/icons";
 
 const NavItem = (props) => {
   return (
-    <div className="bg-white hover:bg-gray-50 shadow-md cursor-pointer p-3 rounded-full text-purple-500 flex items-center gap-2">
+    <div className="bg-white hover:bg-gray-50 shadow-md cursor-pointer p-3 rounded text-purple-500 flex items-center gap-2">
       {props.children}
     </div>
   );
