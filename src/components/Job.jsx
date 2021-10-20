@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { ArrowDropDown, CheckBox, CheckBoxOutlineBlank, Edit } from "@material-ui/icons";
+import { ArrowDropDown, Cancel, CheckBox, CheckBoxOutlineBlank, Edit } from "@material-ui/icons";
 import Tasks from './Tasks';
 import {JobsContext} from '../App';
 
@@ -10,11 +10,11 @@ const JobTitle = ({title, done, id, onClick}) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className="flex gap-3 p-5 mx-auto mt-5 w-4/6 sm:w-3/6 md:w-2/6 lg:w-1/4 bg-purple-500 hover:bg-purple-800 text-white rounded shadow-lg"
+        <div className="flex gap-3 p-5 mx-auto mt-5 w-4/6 sm:w-3/6 md:w-2/6 lg:w-1/4 bg-purple-500 hover:bg-purple-800 text-white rounded shadow"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onDoubleClick={() => setIsEditing(true)}>
-            <ArrowDropDown onClick={onClick} className="bg-white hover:bg-gray-100 rounded-full text-purple-500" /> 
+            <ArrowDropDown onClick={onClick} className="cursor-pointer bg-white hover:bg-gray-100 rounded text-purple-500" /> 
             {
                 isEditing
                     ? <form action="" onSubmit={(e) => {
@@ -35,12 +35,16 @@ const JobTitle = ({title, done, id, onClick}) => {
             }
 
             {
-                isHovered && !isEditing
+                isHovered
                     ? <div className="flex gap-2 h-full">
                         <span className="cursor-pointer hover:text-gray-200" onClick={() => {setJobProp(id, "done", !done);}}>
                           {done ? <CheckBox /> : <CheckBoxOutlineBlank />}
                         </span>
-                        <span className="cursor-pointer" onClick={() => setIsEditing(!isEditing)}><Edit/></span>
+                        {
+                            isEditing
+                                ? <span className="cursor-pointer" onClick={() => setIsEditing(false)}><Cancel/></span>
+                                : <span className="cursor-pointer" onClick={() => setIsEditing(true)}><Edit/></span>
+                        }
                     </div>
                     : ""
             }

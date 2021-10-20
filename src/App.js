@@ -64,6 +64,7 @@ function App() {
     let temp = [...jobsList];
     temp[jobId].tasks[taskId][prop] = value;
     setJobsList(temp);
+    localStorage.setItem("jobs", temp.toString());
     return temp;
   }
   const setJobProp = (jobId, prop, value) => {
@@ -80,7 +81,7 @@ function App() {
   // }
 
   return (
-    <main className="w-full h-full bg-gray-200 flex flex-col justify-center">
+    <main className="w-full h-full bg-gray-200 pt-20 flex flex-col">
       <JobsContext.Provider value={[setTaskProp, setJobProp]}>
         <MyMenu />
         <Navbar />
