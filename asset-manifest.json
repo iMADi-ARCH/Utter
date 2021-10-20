@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Utter/static/css/main.a7a45569.chunk.css",
+    "main.js": "/Utter/static/js/main.7cf86a28.chunk.js",
+    "main.js.map": "/Utter/static/js/main.7cf86a28.chunk.js.map",
+    "runtime-main.js": "/Utter/static/js/runtime-main.87880d3f.js",
+    "runtime-main.js.map": "/Utter/static/js/runtime-main.87880d3f.js.map",
+    "static/js/2.bd388eea.chunk.js": "/Utter/static/js/2.bd388eea.chunk.js",
+    "static/js/2.bd388eea.chunk.js.map": "/Utter/static/js/2.bd388eea.chunk.js.map",
+    "static/js/3.02f6bc25.chunk.js": "/Utter/static/js/3.02f6bc25.chunk.js",
+    "static/js/3.02f6bc25.chunk.js.map": "/Utter/static/js/3.02f6bc25.chunk.js.map",
+    "index.html": "/Utter/index.html",
+    "static/css/main.a7a45569.chunk.css.map": "/Utter/static/css/main.a7a45569.chunk.css.map",
+    "static/js/2.bd388eea.chunk.js.LICENSE.txt": "/Utter/static/js/2.bd388eea.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.87880d3f.js",
+    "static/js/2.bd388eea.chunk.js",
+    "static/css/main.a7a45569.chunk.css",
+    "static/js/main.7cf86a28.chunk.js"
+  ]
+}
