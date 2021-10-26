@@ -16,12 +16,12 @@ function App() {
           id: 0,
           title: "Bread",
           done: true,
-        }, 
+        },
         {
           id: 1,
           title: "Potato Chip",
           done: false,
-        }, 
+        },
       ]
     },
     {
@@ -33,12 +33,12 @@ function App() {
           id: 0,
           title: "Carrot",
           done: false,
-        }, 
+        },
         {
           id: 1,
           title: "Tomato",
           done: false,
-        }, 
+        },
       ]
     },
     {
@@ -50,12 +50,12 @@ function App() {
           id: 0,
           title: "Apple",
           done: false,
-        }, 
+        },
         {
           id: 1,
           title: "Mango",
           done: false,
-        }, 
+        },
       ]
     },
   ]);
